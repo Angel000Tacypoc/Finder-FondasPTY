@@ -1,0 +1,64 @@
+{
+  "fondas": [
+    {
+      "id": 1,
+      "nombre": "Fonda Asados",
+      "descripcion": "Pollo asado y almuerzos del dia",
+      "barrio": "Las Mananitas",
+      "lat": 9.076862,
+      "lng": -79.411575,
+      "precio_rango": "$",
+      "precio_promedio": 3.50,
+      "menu": ["Pollo asado", "Arroz con guandu", "Ensalada", "Almuerzo ejecutivo"],
+      "activo": true
+    },
+    {
+      "id": 2,
+      "nombre": "Le Bon Pan",
+      "descripcion": "Pizzeria y panaderia, ideal para desayuno y merienda",
+      "barrio": "Las Mananitas",
+      "lat": 9.071416,
+      "lng": -79.413685,
+      "precio_rango": "$",
+      "precio_promedio": 2.50,
+      "menu": ["Pizza por pedazo", "Pan dulce", "Empanadas", "Cafe"],
+      "activo": true
+    },
+    {
+      "id": 3,
+      "nombre": "Asados La Pagoda",
+      "descripcion": "Pollo asado y comida variada, buen precio",
+      "barrio": "Las Mananitas",
+      "lat": 9.080019,
+      "lng": -79.403209,
+      "precio_rango": "$",
+      "precio_promedio": 4.00,
+      "menu": ["Pollo asado", "Comida variada", "Arroz", "Patacones"],
+      "activo": true
+    },
+    {
+      "id": 4,
+      "nombre": "Fonda El Sabor del Interior",
+      "descripcion": "Comida tipica panamena, almuerzo ejecutivo economico",
+      "barrio": "Bella Vista",
+      "lat": 8.994071,
+      "lng": -79.519040,
+      "precio_rango": "$",
+      "precio_promedio": 3.50,
+      "menu": ["Arroz con pollo", "Sancocho", "Ropa vieja", "Carne guisada"],
+      "activo": true
+    },
+    {
+      "id": 5,
+      "nombre": "La Esquina del Choripan",
+      "descripcion": "Choripanes y comida rapida barata en Calidonia",
+      "barrio": "Calidonia",
+      "lat": 8.998453,
+      "lng": -79.518200,
+      "precio_rango": "$",
+      "precio_promedio": 2.00,
+      "menu": ["Choripan", "Perro caliente", "Empanadas", "Jugos naturales"],
+      "activo": true
+    }
+  ]
+}

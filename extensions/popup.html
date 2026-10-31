@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FondaFinder PA</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 350px;
+      margin: 0;
+      padding: 15px;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      font-size: 1.2rem;
+      color: #dc3545;
+      margin-top: 0;
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 15px;
+    }
+    .tab {
+      flex: 1;
+      padding: 8px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    .tab.active {
+      border-bottom: 2px solid #dc3545;
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .view {
+      display: none;
+    }
+    .view.active {
+      display: block;
+    }
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:disabled {
+      background-color: #e9ecef;
+      color: #adb5bd;
+    }
+    .fonda-item {
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+    .fonda-item:last-child {
+      border-bottom: none;
+    }
+    .fonda-name {
+      font-weight: bold;
+      color: #333;
+    }
+    .fonda-meta {
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .report-btn {
+      font-size: 0.7rem;
+      background: #ffc107;
+      color: #212529;
+      width: auto;
+      padding: 2px 6px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>FondaFinder PA</h1>
+  
+  <div class="tabs">
+    <div class="tab active" data-tab="search">Buscar</div>
+    <div class="tab" data-tab="add">Registrar</div>
+  </div>
+
+  <!-- Vista Buscar -->
+  <div id="search-view" class="view active">
+    <input type="text" id="q" placeholder="Que quieres comer? (ej. Pollo)" />
+    <div style="display: flex; gap: 5px;">
+      <select id="barrio">
+        <option value="">Todos los barrios</option>
+        <option value="Bella Vista">Bella Vista</option>
+        <option value="Calidonia">Calidonia</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Betania">Betania</option>
+        <option value="Juan Diaz">Juan Diaz</option>
+      </select>
+      <select id="precio" style="width: 120px;">
+        <option value="">$ Todo</option>
+        <option value="$">$</option>
+        <option value="$$">$$</option>
+        <option value="$$$">$$$</option>
+      </select>
+    </div>
+    <button id="search-btn">Buscar Fondas</button>
+    <div id="results" style="margin-top: 15px;"></div>
+  </div>
+
+  <!-- Vista Agregar -->
+  <div id="add-view" class="view">
+    <div class="card">
+      <input type="text" id="add-nombre" placeholder="Nombre de la fonda" required />
+      <select id="add-barrio" required>
+        <option value="">Selecciona Barrio</option>
+        <option value="Bella Vista">Bella Vista</option>
+        <option value="Calidonia">Calidonia</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Betania">Betania</option>
+        <option value="Juan Diaz">Juan Diaz</option>
+      </select>
+      <select id="add-precio">
+        <option value="$">$ (Hasta $5)</option>
+        <option value="$$">$$ ($5 - $10)</option>
+        <option value="$$$">$$$ (+$10)</option>
+      </select>
+      <textarea id="add-desc" placeholder="Descripcion corta o especialidad"></textarea>
+      <button id="save-btn">Enviar para Aprobacion</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
